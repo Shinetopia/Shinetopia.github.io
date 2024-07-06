@@ -1,0 +1,256 @@
+body {
+    background: url("assets/nebula.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 20px;
+}
+
+li {
+    margin: 5px 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 14px 80px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    font-size: 22px;
+    color: black;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+a:hover {
+    color: rgb(17, 141, 141);
+}
+
+.frontPage img {
+    border-radius: 25% 25% 5px 5px;
+}
+
+.frontPage {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px
+}
+
+.line {
+    margin-top: 7px;
+    margin-bottom: 5px;
+    background-color: white;
+    height: 3px;
+    width: 350px;
+}
+
+.heading {
+    color:white;
+    filter: drop-shadow(4px 4px rgb(0, 66, 62))
+}
+
+.content {
+    margin: 20px;
+    background-color: white;
+    padding: 30px;
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 70%;
+    margin-top: 5%;
+    border-radius: 15px;
+}
+
+.content2 {
+    margin: 20px;
+    background-color: white;
+    padding: 30px;
+    display: flex; 
+    align-items: flex-start;
+    flex-direction: row;
+    max-width: 90%;
+    margin-top: 5%;
+    border-radius: 15px;
+}
+
+img {
+    display: block;
+}
+
+.avatar {
+    z-index: 1;
+    clip-path: circle();
+}
+
+.dialogue1 {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.dialogue2 {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.boxie {
+    display: flex;
+    flex-direction: column;
+}
+
+.skillsBox {
+    margin-left: 15px;
+}
+
+.imgSlider {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 10px;
+    background: white;
+}
+
+.imgSlider .slide {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+}
+
+.imgSlider .slide img {
+    z-index: 1;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.imgSlider .slide .info {
+    position: absolute;
+    top: 0;
+    padding: 15px 30px;
+}
+
+.imgSlider .slide .info p {
+    color: white;
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    width: 60%;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.imgSlider .navigation {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.imgSlider .navigation .btn{
+    background: rgba(255, 255, 255, 0.5);
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.topBox {
+    width: 480px;
+    margin-bottom: 15px;
+}
+
+.demImg1 {
+    width: 100%;
+    height: 270px;
+    border-radius: 15px;
+}
+
+.botBox {
+    width: 480px;
+    margin-top: 10px;
+}
+
+.demImg2 {
+    width: 100%;
+    height: 270px;
+    border-radius: 15px;
+}
+
+.boxie2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-right: 5px;
+}
+
+.words {
+    margin-top: 5px;
+    margin-left: 2px;
+}
+
+.words2 {
+    margin-top: 20px;
+    margin-left: 2px;
+}
+
+.webtoon {
+    width: 79px;
+    position: relative;
+    height: 79px;
+}
+
+.webtoon img {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+.webtoonImg {
+    width: 100%;
+    height: 79px;
+}
