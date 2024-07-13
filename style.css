@@ -4,6 +4,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
+    width: 100vw;
     overflow: hidden;
     margin: 0px;
     display: flex;
@@ -14,9 +15,7 @@ body {
 main {
     display: flex;
     justify-content: center;
-    width: 100%;
-
-    
+    width: 100%; 
 }
 
 .container {
@@ -54,6 +53,8 @@ li {
 }
 
 .navbar a {
+    display: relative;
+    z-index: 200;
     font-size: 22px;
     color: black;
     text-decoration: none;
@@ -117,9 +118,10 @@ img {
     display: block;
 }
 
-.avatar {
+.avatar img{
+    display: relative;
     z-index: 1;
-    clip-path: circle();
+    border-radius: 50%;
 }
 
 .dialogue1 {
@@ -142,61 +144,35 @@ img {
     flex-direction: column;
 }
 
+.skillsContent {
+    border-radius: 15px;
+    background-color: white;
+    padding: 30px;
+    position: relative;
+    bottom: 25.5%
+}
+
 .skillsBox {
     margin-left: 15px;
 }
 
-.imgSlider {
-    position: relative;
-    width: 800px;
-    height: 500px;
-    margin: 10px;
-    background: white;
-}
-
-.imgSlider .slide {
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-}
-
-.imgSlider .slide img {
-    z-index: 1;
-    width: 100%;
-    border-radius: 15px;
-}
-
-.imgSlider .slide .info {
-    position: absolute;
-    top: 0;
-    padding: 15px 30px;
-}
-
-.imgSlider .slide .info p {
-    color: white;
-    background: rgba(0, 0, 0, 0.1);
-    font-size: 16px;
-    width: 60%;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-.imgSlider .navigation {
-    z-index: 2;
-    position: absolute;
+#image-track {
     display: flex;
-    bottom: 30px;
+    gap: 4vmin;
+    position: absolute;
+    top: 70%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(0, -50%);
+    user-select: none;
 }
 
-.imgSlider .navigation .btn{
-    background: rgba(255, 255, 255, 0.5);
-    width: 12px;
-    height: 12px;
-    margin: 10px;
-    border-radius: 50%;
+#image-track .image{
     cursor: pointer;
+    border-radius: 5px;
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
 }
 
 .topBox {
@@ -254,3 +230,4 @@ img {
     width: 100%;
     height: 79px;
 }
+
