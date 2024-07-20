@@ -8,11 +8,20 @@ body {
     overflow: hidden;
     margin: 0px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.theBoxie {
     display: flex;
     justify-content: center;
     width: 100%; 
@@ -41,20 +50,17 @@ li {
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     padding: 14px 80px;
     background: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .navbar a {
-    display: relative;
-    z-index: 200;
+    display: inline-block;
     font-size: 22px;
     color: black;
     text-decoration: none;
@@ -82,7 +88,17 @@ a:hover {
     margin-bottom: 5px;
     background-color: white;
     height: 3px;
-    width: 350px;
+    width: 0;
+    animation: lineAnimation 1s forwards;
+}
+
+@keyframes lineAnimation {
+    from {
+        width: 0;
+    }
+    to {
+        width: 350px;
+    }
 }
 
 .heading {
@@ -91,14 +107,13 @@ a:hover {
 }
 
 .content {
-    margin: 20px;
     background-color: white;
     padding: 30px;
     display: flex; 
     flex-direction: column;
     align-items: flex-start;
     max-width: 70%;
-    margin-top: 5%;
+    margin: auto;
     border-radius: 15px;
 }
 
@@ -109,8 +124,7 @@ a:hover {
     display: flex; 
     align-items: flex-start;
     flex-direction: row;
-    max-width: 90%;
-    margin-top: 5%;
+    max-width: 70%;
     border-radius: 15px;
 }
 
@@ -118,10 +132,18 @@ img {
     display: block;
 }
 
-.avatar img{
-    display: relative;
-    z-index: 1;
+.avatarContainer {
+    width: 90px;
+}
+
+.avatar {
     border-radius: 50%;
+}
+
+.avatar img{
+    border-radius: 50%;
+    width: 100%;
+    height: 90px;
 }
 
 .dialogue1 {
@@ -144,12 +166,24 @@ img {
     flex-direction: column;
 }
 
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
 .skillsContent {
     border-radius: 15px;
     background-color: white;
+    max-width: 70%;
+    margin-top: 0.75rem;
     padding: 30px;
-    position: relative;
-    bottom: 25.5%
+    display: flex;
+    flex-direction: column;
+    align-items: 70%;
 }
 
 .skillsBox {
@@ -231,3 +265,54 @@ img {
     height: 79px;
 }
 
+/* @media (max-width: 600px) {
+    .navbar a{
+        font-size: 10px;
+    }
+} */
+
+@media (max-width: 500px) {
+    p {
+        font-size: 15px;
+    }
+    
+    h1 {
+        font-size: 22px;
+    }
+
+    /* About Me */
+    .avatar {
+        height: 65px;
+    }
+
+    .content2 {
+        flex-direction: column;
+        max-width: 80%;
+    }
+
+    .dialogue1 {
+        align-items: flex-start;
+    }
+
+    .dialogue2 {
+        align-items: flex-start;
+    }
+
+    /* Projects */
+    .demImg1 {
+        height: 135px;
+        width: 240px;
+    }
+
+    .demImg2 {
+        height: 135px;
+        width: 240px;
+    }
+
+}
+
+@media (max-width: 350px) {
+    p {
+        font-size: 13px;
+    }
+}
